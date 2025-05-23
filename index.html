@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seni & Kode - Belajar TIK dengan Kreativitas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Artistik -->
+    <header>
+        <h1>Seni & Kode <span class="floating-icon">🎨</span><span class="floating-icon">💻</span></h1>
+        <p>Menggabungkan kreativitas visual dengan pembelajaran Teknologi Informasi dan Komunikasi</p>
+    </header>
+
+    <!-- Navigasi -->
+    <nav>
+        <ul>
+            <li><a href="#seni-digital">Seni Digital</a></li>
+            <li><a href="#coding-kreatif">Coding Kreatif</a></li>
+            <li><a href="#canvas-interaktif">Canvas Interaktif</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+        </ul>
+    </nav>
+
+    <!-- Konten Utama -->
+    <div class="container">
+        <!-- Bagian 1: Seni Digital -->
+        <section id="seni-digital" class="kartu-seni">
+            <h2>Seni dalam Kode</h2>
+            <p>Belajar bagaimana teknologi memungkinkan kita menciptakan seni digital yang menakjubkan. Dari algoritma fraktal hingga generative art, coding membuka pintu kreativitas tanpa batas.</p>
+            
+            <div class="code-example">
+                <h3>Contoh Kode Seni (HTML5 Canvas):</h3>
+                <pre><code>
+function setup() {
+    createCanvas(800, 600);
+    background(240);
+    noStroke();
+    
+    for (let i = 0; i < 100; i++) {
+        fill(random(255), random(255), random(255), 150);
+        ellipse(random(width), random(height), random(20, 80));
+    }
+}
+                </code></pre>
+            </div>
+        </section>
+
+        <!-- Bagian 2: Coding Kreatif -->
+        <section id="coding-kreatif" class="kartu-seni">
+            <h2>Coding sebagai Medium Seni</h2>
+            <p>Pemrograman bukan hanya tentang logika, tapi juga ekspresi kreatif. Pelajari bagaimana konsep TIK seperti:</p>
+            <ul>
+                <li>Variabel dan Fungsi bisa membuat pola visual</li>
+                <li>Perulangan (loops) untuk menciptakan motif berulang</li>
+                <li>Kondisional (if-else) untuk seni interaktif</li>
+            </ul>
+        </section>
+
+        <!-- Bagian 3: Canvas Interaktif -->
+        <section id="canvas-interaktif" class="kartu-seni">
+            <h2>Buat Karyamu Sendiri!</h2>
+            <p>Coba alat menggambar digital ini yang dibuat dengan JavaScript:</p>
+            
+            <div class="toolbox">
+                <div class="color-picker-container">
+                    <span class="color-picker-label">Pilih Warna:</span>
+                    <input type="color" id="color-picker" value="#6A4C93">
+                </div>
+                <button id="random-btn">Warna Acak</button>
+                <button id="clear-btn">Hapus Canvas</button>
+            </div>
+            
+            <canvas id="canvas-art" width="800" height="500"></canvas>
+            
+            <p class="canvas-instruction">
+                Gunakan mouse untuk menggambar. Pilih warna favoritmu atau klik "Warna Acak"!
+            </p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="tentang">
+        <h3>Seni & Kode</h3>
+        <p>Proyek Pembelajaran TIK dengan Pendekatan Kreatif</p>
+        <p>© 2023 - Gabungan antara Teknologi dan Seni Visual</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

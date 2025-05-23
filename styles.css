@@ -1,0 +1,218 @@
+/* === Gaya Artistik dengan Warna Kontras === */
+:root {
+    --warna-primer: #6A4C93; /* Ungu seni */
+    --warna-sekunder: #FF9F1C; /* Oranye cerah */
+    --warna-aksen: #2EC4B6; /* Biru-hijau */
+    --warna-teks: #1A1A2E; /* Gelap elegan */
+    --warna-latar: #F8F7FF; /* Putih lembut */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #F8F7FF 0%, #E2E1FF 100%);
+    color: var(--warna-teks);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* === Header dengan Efek Brush Stroke === */
+header {
+    background: url('https://i.imgur.com/KyZQxWv.png') center/cover;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(106, 76, 147, 0.7);
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    color: white;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 1rem auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* === Navigasi Artistik === */
+nav {
+    background: var(--warna-primer);
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: var(--warna-sekunder);
+    transform: translateY(-3px);
+}
+
+/* === Konten Utama dengan Kartu Seni === */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.kartu-seni {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.kartu-seni:hover {
+    transform: translateY(-10px);
+}
+
+.kartu-seni h2 {
+    color: var(--warna-primer);
+    border-bottom: 2px dashed var(--warna-sekunder);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.code-example {
+    background: #f3f3f3;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* === Bagian Interaktif: Canvas Drawing === */
+#canvas-art {
+    display: block;
+    margin: 2rem auto;
+    border: 3px solid var(--warna-primer);
+    border-radius: 8px;
+    background: white;
+    cursor: crosshair;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.toolbox {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.toolbox button {
+    padding: 0.5rem 1rem;
+    background: var(--warna-sekunder);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.toolbox button:hover {
+    background: var(--warna-primer);
+}
+
+/* Style untuk color picker */
+.color-picker-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.color-picker-label {
+    font-weight: bold;
+    color: var(--warna-teks);
+}
+
+#color-picker {
+    width: 50px;
+    height: 30px;
+    border: 2px solid var(--warna-primer);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.canvas-instruction {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+}
+
+/* === Footer dengan Desain Gradien === */
+footer {
+    background: linear-gradient(135deg, var(--warna-primer) 0%, #4A306D 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* === Animasi & Efek Khusus === */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.floating-icon {
+    animation: float 3s ease-in-out infinite;
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+/* === Responsif untuk Mobile === */
+@media (max-width: 768px) {
+    header h1 { font-size: 2.5rem; }
+    nav ul { flex-direction: column; align-items: center; gap: 0.5rem; }
+    #canvas-art { 
+        width: 100%; 
+        height: auto;
+        max-height: 400px;
+    }
+}
